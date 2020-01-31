@@ -1,0 +1,64 @@
+operadores Relacionais
+> maior
+< menor
+== igual
+<= menor ou igual
+>= maoir ou igual
+!= diferente
+
+5 > 2  True
+7 < 4 False
+8 >= 8 True
+9 <= 7 False
+5 == 5 True
+4 != 4 False
+
+operadores Identidade
+
+5 == 5  True
+5 == '5' True //JS está comparando os valores não o tipagem sendo assim, ele compara 5 numerico com o valor dentro as '' é um 5 
+              // valores de tipo de diferentes mas dentro deles está a mesma grandeza de valor
+5 === '5' False //ver se são identicos, no valor e no tipo, valores iguais mas a Tipagem diferente 
+
+logicos
+
+! negação
+&& conjuçãoo = and = e
+|| disjunção = or = ou 
+
+
+! true = false
+! false = true
+
+true && true = true
+true && false = false
+false && true = false
+false && false = false
+
+true || true = true
+true || false = true
+false || true = true
+false || false = false
+
+
+Precedência ordem: 
+1ª  () ** / = Operadores de aritimentos
+2ª > < >= ... relacionais = da esquerda para direita
+3ª !
+4ª &&
+5ª ||
+
+
+Ternário
+?:
+teste ? true : false
+media > 7.0 ? "Aprovado" : "Reprovado"
+    media = 10 = "Aprovado"
+    media = 5  = "Reprovado"
+
+
+
+
+
+
+

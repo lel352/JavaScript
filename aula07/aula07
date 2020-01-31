@@ -1,0 +1,64 @@
+Operadores Aritméticos
++ soma
+- subratação
+* multiplicacao
+/ divisão
+% modulo
+** exponenciação - Potencia
+
+5 + 2 = 7
+5 - 2 = 3
+5 * 2 = 10
+5 / 2 = 2.5
+5 % 2 = 1
+5 ** 2 = 25
+
+
+ordem de precedência
+1ª () 
+2ª **
+3ª * / %  da esquerda para direita
+4ª + - da esquerda para direita
+
+var b = 3 % 2 + 4 / 2 = 3
+
+Atribuição Simples
+var a = 5 + 3
+ 
+Auto-Atribuição
+var n = 3
+n = n + 4    =  7
+n = n - 5    =  2
+n = n * 4    =  8
+n = n / 2    =  4
+n = n ** 2   =  16
+n = n % 5    =  1
+
+
+Simplificando elas
+var n = 3
+n += 4    =  7
+n -= 5    =  2
+n *=  4    =  8
+n /= 2    =  4
+n **= 2   =  16
+n %= 5    =  1
+
+Incremento
+var x = 5
+x = x + 1     = 6   x += 1
+x = x - 1     = 5   x -= 1
+
+x ++
+x --
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 09 - Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(64, 64, 214);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inicinado estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div>Cliquie em mim</div>
+    <script>
+        window.document.writeln("Teste para ver o window document <br>")
+        window.document.writeln('Ola mundo') //forma mais simples de inserir algo, mas não é a melhor
+        window.document.writeln(window.document.charset)
+        window.document.writeln(window.navigator.appName)
+        window.document.writeln(window.document.URL+'<br>')
+        
+        //getElementsByTagName Permite selecionar varios elementos pela sua Tag 
+        // pegando elemento (tag) p o [0] é para pegar a primeira tag (p) que aparece no dom
+         var p1 = window.document.getElementsByTagName('p')[0]
+         window.document.writeln('Está escrito assim: ' + p1.innerText+'<br>')
+         // mundo o style da tag
+         p1.style.color ="red"
+
+         var corpo = window.document.body
+         corpo.style.background = "black"
+
+         var p2 = window.document.getElementsByTagName('p')[1]
+         document.writeln(p2.innerText+'<br>') // não pega a formatção sendo assim  não tem o negrigo na palavra DOM
+         document.writeln(p2.innerHTML+'<br>') //  pega a formatção mostrar o texto formato mostra o negri do DOM
+         //window.alert(p2.innerHTML)
+
+
+
+    </script>
+</body>
+</html>
+
