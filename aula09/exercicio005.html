@@ -17,7 +17,11 @@
     <h1>Inicinado estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>Cliquie em mim</div>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Clique em mim</div>
+    <div class="msg">Clique em mim</div>
+    <div id="msg2">Clique em mim</div>
+    <div clas="msg2">Clique em mim</div>
     <script>
         window.document.writeln("Teste para ver o window document <br>")
         window.document.writeln('Ola mundo') //forma mais simples de inserir algo, mas não é a melhor
@@ -39,9 +43,22 @@
          document.writeln(p2.innerText+'<br>') // não pega a formatção sendo assim  não tem o negrigo na palavra DOM
          document.writeln(p2.innerHTML+'<br>') //  pega a formatção mostrar o texto formato mostra o negri do DOM
          //window.alert(p2.innerHTML)
+         var d = window.document.getElementById('msg')
+         d.style.background = 'green'
+         d.innerText = 'Estou Aguardando...'
+         //window.document.getElementById('msg').innerText = 'Olá'
 
+         var d2 = window.document.getElementsByName('msg')[0]
+         d2.innerText = 'Olá 2'
 
+         var d3 = window.document.getElementsByClassName('msg')[0]
+         d3.innerText = 'Olá 3'
 
+         //Nova forma, recente
+         var dnova = window.document.querySelector('div#msg2') //# para ID
+         dnova.style.color = 'blue'
+         var dnova = window.document.querySelector('div.msg2') //. para Class
+         dnova.style.color = 'red'
     </script>
 </body>
 </html>
