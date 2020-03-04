@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha - (Foma de Gambiarra)</title>
+    <style>
+        div {
+            font: normal 100pt Arial;
+            background: rgb(170, 185, 185);
+            color: black;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            margin-left: 5px;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        div#div4,
+        div#div7 {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Clique nos quadrados para jogar</h1>
+    <h2 id="vencedor"></h2>
+    <div id="div1" onclick="clicar1()"></div>
+    <div id="div2" onclick="clicar2()"></div>
+    <div id="div3" onclick="clicar3()"></div>
+
+    <div id="div4" onclick="clicar4()"></div>
+    <div id="div5" onclick="clicar5()"></div>
+    <div id="div6" onclick="clicar6()"></div>
+
+    <div id="div7" onclick="clicar7()"></div>
+    <div id="div8" onclick="clicar8()"></div>
+    <div id="div9" onclick="clicar9()"></div>
+    <script>
+        /* Fiz isso para brincar com o pouco de conhecimento que tenho da Linguagem*/
+        
+        
+        var vez = true
+        var vdiv1 = 10
+        var vdiv2 = 11
+        var vdiv3 = 12
+
+        var vdiv4 = 13
+        var vdiv5 = 14
+        var vdiv6 = 15
+
+        var vdiv7 = 16
+        var vdiv8 = 17
+        var vdiv9 = 18
+        var vencedor = window.document.getElementById('vencedor')
+
+        var fim = 0
+
+        function resultadoFinal() {
+
+            var venceu = 'X'
+            if (vez)
+                venceu = 'O'
+
+            if (fim > 4) {
+                if (((vdiv1 == vdiv2) && (vdiv1 == vdiv3)) || 
+                    ((vdiv1 == vdiv5) && (vdiv1 == vdiv9)) || 
+                    ((vdiv1 == vdiv4) && (vdiv1 == vdiv7))) {
+                    vencedor.innerText = `Vencedor foi ${venceu} !!!`
+                    fim = 10
+                }
+                else if (((vdiv3 == vdiv5) && (vdiv3 == vdiv7)) ||
+                    ((vdiv3 == vdiv6) && (vdiv3 == vdiv9))) {
+                    vencedor.innerText = `Vencedor foi ${venceu} !!!`
+                    fim = 10
+                }
+                else if ((vdiv2 == vdiv5) && (vdiv2 == vdiv8)) {
+                    vencedor.innerText = `Vencedor foi ${venceu} !!!`
+                    fim = 10
+                }
+                else if ((vdiv4 == vdiv5) && (vdiv4 == vdiv6)) {
+                    vencedor.innerText = `Vencedor foi ${venceu} !!!`
+                    fim = 10
+                }
+                else if ((vdiv7 == vdiv8) && (vdiv7 == vdiv9)) {
+                    vencedor.innerText = `Vencedor foi ${venceu} !!!`
+                    fim = 10
+                }
+                if (fim == 9)
+                    vencedor.innerText = 'Deu Empate !!!'
+            }
+        }
+
+        function clicar1() {
+            if (vdiv1 == '10') {
+                var div1 = window.document.getElementById('div1')
+                if (vez) {
+                    vdiv1 = 1
+                    div1.innerText = 'X'
+                    div1.style.background = 'red'
+                }
+                else {
+                    vdiv1 = 0
+                    div1.innerText = 'O'
+                    div1.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar2() {
+            if (vdiv2 == '11') {
+                var div2 = window.document.getElementById('div2')
+                if (vez) {
+                    vdiv2 = 1
+                    div2.innerText = 'X'
+                    div2.style.background = 'red'
+                }
+                else {
+                    vdiv2 = 0
+                    div2.innerText = 'O'
+                    div2.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar3() {
+            if (vdiv3 == '12') {
+                var div3 = window.document.getElementById('div3')
+                if (vez) {
+                    vdiv3 = 1
+                    div3.innerText = 'X'
+                    div3.style.background = 'red'
+                }
+                else {
+                    vdiv3 = 0
+                    div3.innerText = 'O'
+                    div3.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar4() {
+            if (vdiv4 == '13') {
+                var div4 = window.document.getElementById('div4')
+                if (vez) {
+                    vdiv4 = 1
+                    div4.innerText = 'X'
+                    div4.style.background = 'red'
+                }
+                else {
+                    vdiv4 = 0
+                    div4.innerText = 'O'
+                    div4.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar5() {
+            if (vdiv5 == '14') {
+                var div5 = window.document.getElementById('div5')
+                if (vez) {
+                    vdiv5 = 1
+                    div5.innerText = 'X'
+                    div5.style.background = 'red'
+                }
+                else {
+                    vdiv5 = 0
+                    div5.innerText = 'O'
+                    div5.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar6() {
+            if (vdiv6 == '15') {
+                var div6 = window.document.getElementById('div6')
+                if (vez) {
+                    vdiv6 = 1
+                    div6.innerText = 'X'
+                    div6.style.background = 'red'
+                }
+                else {
+                    vdiv6 = 0
+                    div6.innerText = 'O'
+                    div6.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar7() {
+            if (vdiv7 == '16') {
+                var div7 = window.document.getElementById('div7')
+                if (vez) {
+                    vdiv7 = 1
+                    div7.innerText = 'X'
+                    div7.style.background = 'red'
+                }
+                else {
+                    vdiv7 = 0
+                    div7.innerText = 'O'
+                    div7.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar8() {
+            if (vdiv8 == '17') {
+                var div8 = window.document.getElementById('div8')
+                if (vez) {
+                    vdiv8 = 1
+                    div8.innerText = 'X'
+                    div8.style.background = 'red'
+                }
+                else {
+                    vdiv8 = 0
+                    div8.innerText = 'O'
+                    div8.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+        function clicar9() {
+            if (vdiv9 == '18') {
+                var div9 = window.document.getElementById('div9')
+                if (vez) {
+                    vdiv9 = 1
+                    div9.innerText = 'X'
+                    div9.style.background = 'red'
+                }
+                else {
+                    vdiv9 = 0
+                    div9.innerText = 'O'
+                    div9.style.background = 'blue'
+                }
+                vez = !vez
+                fim++
+            }
+            resultadoFinal()
+        }
+
+    </script>
+</body>
+
+</html>
