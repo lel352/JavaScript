@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Condições Parte 1 </title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    Velocidade do Carro: <input type="number" name='txtVelocidade' id='txtVelocidade'> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id='divResultado'>
+    <script>
+        function calcular() {
+            var txtVelocidade = window.document.getElementById('txtVelocidade')
+            var divResultado =  window.document.querySelector('div#divResultado')
+            var velocidade = Number(txtVelocidade.value)
+            divResultado.innerHTML = `<p>Sua Velocidade atual é de <strong> ${velocidade}km/h</strong></p>`
+            if (velocidade > 60)            
+                divResultado.innerHTML += '<p>Vocé está <strong>MULTADO</strong> por excesso de velocidade !!</p>'
+            divResultado.innerHTML += '<p>Dirija sempre com o cinto de Segurança</p>'
+        }
+    </script>
+</body>
+</html>
